@@ -1,12 +1,22 @@
 import BreakLine from "@/components/Breakline";
 import { Button } from "@/components/Button";
-import Footer from "@/components/Footer";
 import SmallCard from "@/components/SmallCard";
+import Image from "next/image";
+import Debt from "../../public/debtpocket.png"
+import Budget from "../../public/budget.png"
+import Evaluate from "../../public/evaluate.png"
+import Finalize from "../../public/finalize.png"
+import Harrasment from "../../public/harrasment.png"
+import Legal from "../../public/legal.png"
+import Negotiate from "../../public/negotiate.png"
+import DebtFree from "../../public/debt.png"
+
+
 
 export default function Home() {
   return (
     <>
-      <div className="flex-col-reverse flex  md:flex-row justify-between items-center">
+      <div className="flex-col-reverse flex md:flex-row justify-between items-center md:my-20">
         <div className="font-bold flex flex-col gap-7 md:gap-14 md:w-1/2 ">
           <div className="text-center md:text-start">
             <h1 className="text-6xl md:mt-20 ">
@@ -37,8 +47,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="md:w-1/2">
-          <img className="" src="./debtpocket.png" alt="" />
+        <div className="md:w-1/2 flex justify-end">
+          <Image width={500} height={500} className="" src={Debt} alt="" />
         </div>
       </div>
 
@@ -51,10 +61,10 @@ export default function Home() {
           Take Control of your Debt Today
         </h1>
         <div className="flex flex-col md:flex-row justify-between py-10">
-          <SmallCard imageSource="./evaluate.png" title="We evaluate" />
-          <SmallCard imageSource="./budget.png" title="We budget" />
-          <SmallCard imageSource="./negotiate.png" title="We negotiate" />
-          <SmallCard imageSource="./finalize.png" title="We finalize" />
+          <SmallCard imageSource={Evaluate} title="We evaluate" />
+          <SmallCard imageSource={Budget} title="We budget" />
+          <SmallCard imageSource={Negotiate} title="We negotiate" />
+          <SmallCard imageSource={Finalize} title="We finalize" />
         </div>
       </div>
 
@@ -63,9 +73,9 @@ export default function Home() {
       <div className="flex py-10 flex-col items-center">
         <h1 className="py-10  text-6xl font-bold text-center">Services</h1>
         <div className="flex flex-col md:flex-row justify-between md:py-10 ">
-          <SmallCard imageSource="./debt.png" title="Debt free solutions" />
-          <SmallCard imageSource="./harrasment.png" title="Relief from Creditor’s Harrasment" />
-          <SmallCard imageSource="./legal.png" title="Legal Advisory" />
+          <SmallCard imageSource={DebtFree} title="Debt free solutions" />
+          <SmallCard imageSource={Harrasment} title="Relief from Creditor’s Harrasment" />
+          <SmallCard imageSource={Legal} title="Legal Advisory" />
         </div>
       </div>
     </>
